@@ -1,99 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TacSketch – Privacy Policy</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      padding: 28px 18px;
-      background: #fff;
-      color: #111;
-    }
-    .wrap{
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    h1{ font-size: 28px; margin: 0 0 6px; }
-    .meta{ color: #555; margin-bottom: 18px; }
-    h2{ font-size: 18px; margin-top: 22px; }
-    p, li { font-size: 16px; }
-    ul{ padding-left: 20px; }
-    .card{
-      border: 1px solid #e6e6e6;
-      border-radius: 14px;
-      padding: 18px;
-      margin-top: 16px;
-      background: #fafafa;
-    }
-    a{ color: #0a66ff; }
-    @media (prefers-color-scheme: dark){
-      body{ background:#0b0b0b; color:#f4f4f4; }
-      .meta{ color:#aaa; }
-      .card{ background:#121212; border-color:#2a2a2a; }
-      a{ color:#6aa9ff; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TacSketch</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1 { color: #003366; margin-bottom: 10px; }
+        h2 { color: #0055a5; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h3 { color: #444; margin-top: 20px; }
+        p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .last-updated { color: #666; font-style: italic; font-size: 0.9em; margin-bottom: 30px; }
+        .contact-box {
+            background-color: #eef5fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Privacy Policy</h1>
-    <div class="meta">Last updated: January 9, 2026</div>
 
-    <div class="card">
-      <p>This Privacy Policy describes how <b>TacSketch</b> (“the App”) handles information when you use the App.</p>
+<div class="container">
+    <h1>Privacy Policy for TacSketch</h1>
+    <p class="last-updated">Last Updated: January 17, 2026</p>
+
+    <p>Your privacy is important to us. This policy describes how <strong>TacSketch</strong> ("the App", "we") collects, uses, and protects your information.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>To function as a collaboration tool for coaches, TacSketch collects the following data:</p>
+
+    <h3>A. Account Information</h3>
+    <p>When you create an account, we store:</p>
+    <ul>
+        <li><strong>Email Address:</strong> For authentication and account recovery.</li>
+        <li><strong>Name & Club:</strong> To identify you to your team members within the app.</li>
+        <li><strong>User ID:</strong> A unique technical identifier linked to your account.</li>
+    </ul>
+
+    <h3>B. User-Generated Content</h3>
+    <p>Materials you create are stored securely to enable synchronization and collaboration:</p>
+    <ul>
+        <li>Tactics, drills, and drawings.</li>
+        <li>Training sessions and notes.</li>
+        <li>Team settings (Team Name, Sport, Colors).</li>
+        <li>Player information (Names, Positions, Numbers, optional Photos).</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <p>We use your data solely to provide the App's functionality:</p>
+    <ul>
+        <li><strong>Authentication:</strong> To securely log you in.</li>
+        <li><strong>Cloud Sync:</strong> To save your tactics to the cloud (Firebase Firestore) so you can access them across devices.</li>
+        <li><strong>Collaboration:</strong> To allow multiple coaches in the same team to view and edit shared tactics.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p>We do not sell your data. We use the following trusted service:</p>
+    <ul>
+        <li><strong>Google Firebase (Auth & Firestore):</strong> Used for secure hosting, database storage, and authentication.
+            <a href="https://firebase.google.com/support/privacy" target="_blank">Google's Privacy Policy</a>.
+        </li>
+    </ul>
+    <p><strong>No Ads or Tracking:</strong> TacSketch does not contain third-party advertisements and does not use analytics tools to track you across other apps or websites.</p>
+
+    <h2>4. Data Deletion & Rights</h2>
+    <p>You have full control over your data.</p>
+    <ul>
+        <li><strong>Delete Account:</strong> You can delete your account and all associated personal data directly within the App via the Settings menu.</li>
+        <li><strong>Leave/Delete Teams:</strong> You can leave teams or, if you are the creator, delete the team and its data entirely.</li>
+    </ul>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>TacSketch is a utility tool for coaches and is not directed at children under the age of 13.</p>
+    <p><strong>Coach Responsibility:</strong> If you, as a coach, input data (such as names or photos) regarding players under the age of 13 (or the applicable age of consent in your jurisdiction), you represent that you have obtained the necessary consent from the child's parent or legal guardian to process such data within the App.</p>
+
+    <h2>6. Contact Us</h2>
+    <div class="contact-box">
+        <p>If you have questions about this policy, please contact the developer:</p>
+        <p><strong>Instagram:</strong> href="https://www.instagram.com/tacsketchapp/" target="_blank" rel="noopener">https://www.instagram.com/tacsketchapp/</p>
     </div>
 
-    <h2>1) Summary</h2>
-    <ul>
-      <li>The App does <b>not</b> require accounts or login.</li>
-      <li>The App stores your content locally on your device and may also store it in your <b>iCloud</b> (iCloud Documents), depending on your device settings.</li>
-      <li>We do <b>not</b> collect, view, or access the content you create in the App.</li>
-    </ul>
+</div>
 
-    <h2>2) Information We Collect</h2>
-    <h3>2.1 Personal Data</h3>
-    <p>We do <b>not</b> collect personal information such as your name, email address, phone number, or address.</p>
-
-    <h3>2.2 App Content</h3>
-    <p>The content you create in the App (for example tactics boards, templates, team/player information, or player photos) is stored:</p>
-    <ul>
-      <li>on your device, and/or</li>
-      <li>in your personal iCloud account using Apple’s iCloud Documents service (if iCloud is enabled on your device).</li>
-    </ul>
-    <p>This data is associated with your Apple ID and managed by Apple iCloud.</p>
-
-    <h2>3) iCloud Storage</h2>
-    <p>If iCloud is enabled for the App, your data may be stored in iCloud and synced across your Apple devices.</p>
-    <p><b>Important:</b> Deleting the App from your device may not automatically delete data stored in iCloud.</p>
-    <p>You can manage or delete App data stored in iCloud through your device settings:</p>
-    <p><b>Settings → Apple ID → iCloud → Manage Account Storage</b> (or similar, depending on iOS version).</p>
-
-    <h2>4) Analytics / Tracking</h2>
-    <p>We do <b>not</b> use tracking technologies or advertising SDKs.</p>
-    <p>We do <b>not</b> sell or rent any user data.</p>
-
-    <h2>5) Service Providers</h2>
-    <p>We do not share your App content with third parties.</p>
-    <p>The App may rely on Apple iCloud services to store/sync your content if enabled.</p>
-
-    <h2>6) Data Security</h2>
-    <p>We take privacy seriously. Your data is stored locally and/or in iCloud depending on your settings. We do not have access to your iCloud content.</p>
-
-    <h2>7) Children’s Privacy</h2>
-    <p>The App does not knowingly collect personal information from children. Since we do not collect personal data, there is no child data collection.</p>
-
-    <h2>8) Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated “Last updated” date.</p>
-
-    <h2>9) Contact</h2>
-    <p>If you have any questions about this Privacy Policy, contact:</p>
-    <p><a href="https://www.instagram.com/tacsketchapp/" target="_blank" rel="noopener">https://www.instagram.com/tacsketchapp/</a></p>
-
-  </div>
 </body>
 </html>
+
+
+ 
