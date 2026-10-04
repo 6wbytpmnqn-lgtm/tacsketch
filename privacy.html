@@ -1,103 +1,345 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - TacSketch</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        h1 { color: #003366; margin-bottom: 10px; }
-        h2 { color: #0055a5; margin-top: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h3 { color: #444; margin-top: 20px; }
-        p { margin-bottom: 15px; }
-        ul { margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .last-updated { color: #666; font-style: italic; font-size: 0.9em; margin-bottom: 30px; }
-        .contact-box {
-            background-color: #eef5fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Integritetspolicy för TacSketch. Läs hur appen hanterar konton, lagmaterial, träningstester och målräknaren.">
+  <title>Integritetspolicy | TacSketch</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0b2348;
+      --blue: #15549a;
+      --gold: #f9c744;
+      --ink: #17243a;
+      --muted: #516076;
+      --line: #dce5ef;
+      --page: #f3f6fb;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    a { color: var(--blue); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #091b39 0%, #113b74 63%, #1b62a7 100%);
+      color: var(--white);
+      padding: clamp(38px, 7vw, 72px) 20px 92px;
+    }
+    .hero-inner, main, footer .inner { max-width: 860px; margin: 0 auto; }
+    .brand {
+      display: inline-block;
+      margin-bottom: 38px;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 5vw, 39px);
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: -1.6px;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .brand span { color: var(--gold); }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -.035em;
+    }
+    .hero-copy { max-width: 680px; margin: 20px 0 0; color: #e4edfa; font-size: 18px; }
+    .updated { margin: 18px 0 0; color: #c4d6ee; font-size: 14px; }
+
+    main { position: relative; margin-top: -54px; padding: 0 20px 52px; }
+    .paper {
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(11, 35, 72, .10);
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 21px clamp(24px, 5vw, 46px);
+      border-bottom: 1px solid var(--line);
+      background: #fbfcff;
+    }
+    .toolbar-title { margin: 0; color: var(--muted); font-size: 14px; font-weight: 700; }
+    .language-switch { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+    .language-switch button {
+      min-width: 92px;
+      padding: 8px 13px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .language-switch button[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+    article { padding: clamp(26px, 5vw, 48px); }
+    article[hidden] { display: none; }
+    .intro {
+      margin: 0 0 28px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      background: #fff9e9;
+      color: #3d4656;
+    }
+    .contents {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 34px;
+      padding: 0;
+      list-style: none;
+    }
+    .contents a {
+      display: inline-block;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .contents a:hover { background: #ecf4ff; }
+    section { padding: 25px 0; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+    section:first-of-type { border-top: 0; }
+    h2 { margin: 0 0 14px; color: var(--navy); font-size: 23px; line-height: 1.25; letter-spacing: -.02em; }
+    h3 { margin: 22px 0 7px; color: var(--navy); font-size: 16px; }
+    p { margin: 0 0 13px; }
+    ul { margin: 0 0 15px; padding-left: 23px; }
+    li { padding-left: 3px; margin: 7px 0; }
+    .note {
+      margin: 18px 0 0;
+      padding: 16px 18px;
+      border-radius: 10px;
+      background: #eef5fc;
+      color: #29455f;
+    }
+    .contact {
+      padding: 20px;
+      border-radius: 12px;
+      background: #eef5fc;
+    }
+    .contact p:last-child, section p:last-child { margin-bottom: 0; }
+    footer { padding: 27px 20px 40px; color: var(--muted); font-size: 13px; text-align: center; }
+
+    @media (max-width: 560px) {
+      .hero { padding-bottom: 78px; }
+      main { margin-top: -42px; padding-left: 12px; padding-right: 12px; }
+      .paper { border-radius: 16px; }
+      .toolbar { align-items: flex-start; }
+      .toolbar-title { width: 100%; }
+      .language-switch { width: 100%; }
+      .language-switch button { flex: 1; }
+      h2 { font-size: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>Privacy Policy for TacSketch</h1>
-    <p class="last-updated">Last Updated: February 14, 2026</p>
-
-    <p>Your privacy is important to us. This policy describes how <strong>TacSketch</strong> ("the App", "we") collects, uses, and protects your information based on the App's current functionality.</p>
-
-    <h2>1. Information We Collect</h2>
-    <p>To function as a collaboration tool for coaches, TacSketch collects the following data:</p>
-
-    <h3>A. Account Information</h3>
-    <p>When you create an account or sign in, we store:</p>
-    <ul>
-        <li><strong>Email Address:</strong> For authentication and account recovery.</li>
-        <li><strong>Name & Club:</strong> To identify you to your team members within the app.</li>
-        <li><strong>User ID:</strong> A unique technical identifier linked to your account, including identifiers provided by third-party login services like <strong>Sign In with Apple</strong>.</li>
-    </ul>
-
-    <h3>B. User-Generated Content</h3>
-    <p>Materials you create are stored securely to enable synchronization and collaboration:</p>
-    <ul>
-        <li>Tactics, drills, drawings, and <strong>formation templates</strong>.</li>
-        <li>Training sessions and notes.</li>
-        <li><strong>Match results and scores</strong> (from the Goal Counter tool).</li>
-        <li>Team settings (Team Name, Sport, Colors, and Logo).</li>
-        <li>Player information (Names, Positions, Numbers, and optional Photos).</li>
-    </ul>
-
-    <h2>2. How We Use Your Information</h2>
-    <p>We use your data solely to provide the App's functionality:</p>
-    <ul>
-        <li><strong>Authentication:</strong> To securely log you in.</li>
-        <li><strong>Cloud Sync:</strong> To save your tactics and match data to the cloud (Firebase Firestore) so you can access them across devices.</li>
-        <li><strong>Collaboration:</strong> To allow multiple coaches in the same team to view and edit shared tactics and notes.</li>
-    </ul>
-
-    <h2>3. Third-Party Services & Storage</h2>
-    <p>We do not sell your data. We use the following trusted services:</p>
-    <ul>
-        <li><strong>Google Firebase (Auth & Firestore):</strong> Used for secure authentication and as a real-time database for team collaboration and data syncing.</li>
-        <li><strong>Apple iCloud:</strong> TacSketch supports iCloud Documents to enable seamless access to certain files and offline copies across your Apple devices.</li>
-    </ul>
-    <p><strong>Advertising:</strong> The App is currently <strong>ad-free</strong>. Although the infrastructure for advertisements exists in the code, it is currently disabled, and no data is shared with ad providers at this time.</p>
-
-    <h2>4. Data Deletion & Rights</h2>
-    <p>You have full control over your data:</p>
-    <ul>
-        <li><strong>Delete Account:</strong> You can delete your account and all associated personal data directly within the App via the Settings menu.</li>
-        <li><strong>Leave/Delete Teams:</strong> You can leave teams or, if you are the "President" (creator), delete the team and its data entirely.</li>
-    </ul>
-
-    <h2>5. Children’s Privacy</h2>
-    <p>TacSketch is a utility tool for coaches and is not directed at children under the age of 13.</p>
-    <p><strong>Coach Responsibility:</strong> If you, as a coach, input data regarding players under the age of consent, you represent that you have obtained the necessary parental or guardian consent to process such data within the App.</p>
-
-    <h2>6. Contact Us</h2>
-    <div class="contact-box">
-        <p>If you have questions about this policy, please contact the developer:</p>
-        <p><strong>Email:</strong> tacsketch@gmail.com</p>
+  <header class="hero">
+    <div class="hero-inner">
+      <a class="brand" href="#top" aria-label="TacSketch"><span>Tac</span>Sketch</a>
+      <p class="eyebrow" id="hero-eyebrow">Din data i TacSketch</p>
+      <h1 id="top">Integritetspolicy</h1>
+      <p class="hero-copy" id="hero-copy">Här beskriver vi vilka uppgifter appen använder, var de sparas och hur du kan hantera dem.</p>
+      <p class="updated" id="hero-updated">Senast uppdaterad: 4 oktober 2026</p>
     </div>
+  </header>
 
-</div>
+  <main>
+    <div class="paper">
+      <div class="toolbar">
+        <p class="toolbar-title" id="language-label">Välj språk</p>
+        <div class="language-switch" role="group" aria-labelledby="language-label">
+          <button type="button" data-lang="sv" aria-pressed="true">Svenska</button>
+          <button type="button" data-lang="en" aria-pressed="false">English</button>
+        </div>
+      </div>
 
+      <article id="policy-sv" lang="sv">
+        <p class="intro">TacSketch är ett planeringsverktyg för tränare och lag. Vi använder kontouppgifter och det material du väljer att skapa för att appen ska fungera, synkronisera och låta dig samarbeta med andra.</p>
+        <nav aria-label="Innehåll">
+          <ul class="contents">
+            <li><a href="#sv-uppgifter">Uppgifter</a></li>
+            <li><a href="#sv-anvandning">Användning</a></li>
+            <li><a href="#sv-lagring">Lagring och delning</a></li>
+            <li><a href="#sv-radering">Radering</a></li>
+            <li><a href="#sv-barn">Barn</a></li>
+            <li><a href="#sv-kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <section id="sv-uppgifter">
+          <h2>Vilka uppgifter hanterar vi?</h2>
+          <ul>
+            <li><strong>Konto:</strong> e-postadress, användar-ID, namn och klubbnamn. Du kan logga in med e-post och lösenord eller med Apple. Autentiseringen hanteras av Firebase Authentication.</li>
+            <li><strong>Lag och spelare:</strong> lagets namn, sport, färger, medlemmar och roller samt spelares namn, positioner, nummer och annan information du anger. Laglogga och spelarfoton är valfria.</li>
+            <li><strong>Skapat material:</strong> taktiker, övningar, ritningar, animeringar, formationer, anteckningar, träningspass och bilder som du själv lägger till.</li>
+            <li><strong>Träningstester:</strong> testnamn, deltagarnas namn och de resultat som du registrerar vid olika testtillfällen.</li>
+            <li><strong>Målräknare:</strong> pågående resultat, vald tid och inställning för slutsignal sparas lokalt på din enhet så att du kan fortsätta senare. Den nya målräknaren skapar ingen matchhistorik i molnet.</li>
+          </ul>
+          <p>Äldre versioner av appen kunde spara matchhistorik. Sådana äldre uppgifter kan finnas kvar även om de inte längre visas i den nya målräknaren.</p>
+        </section>
+
+        <section id="sv-anvandning">
+          <h2>Varför använder vi uppgifterna?</h2>
+          <p>Uppgifterna används för inloggning, för att spara och visa ditt material på dina enheter, för att ge rätt personer åtkomst till ett delat lag och för att låta laget följa upp träningstester. Vi säljer inte dina personuppgifter.</p>
+        </section>
+
+        <section id="sv-lagring">
+          <h2>Var lagras och delas uppgifterna?</h2>
+          <p><strong>Google Firebase Authentication och Firestore</strong> används för konton, molnsynkronisering och delade lag. Material du sparar i ett delat lag kan ses av lagets medlemmar enligt deras roller i appen.</p>
+          <p>Appen sparar också inställningar, tillfälliga kopior av material och målräknarens pågående resultat på din enhet. PDF-filer med träningspass och Excel-filer med träningstester skapas när du själv väljer att exportera eller dela dem.</p>
+          <p><strong>Reklam:</strong> TacSketch visar för närvarande ingen reklam och begär inte spårning för reklam. Reklamfunktionen är avstängd i den aktuella appversionen.</p>
+        </section>
+
+        <section id="sv-radering">
+          <h2>Hur länge sparas uppgifterna och hur raderar du dem?</h2>
+          <p>Ditt konto och ditt sparade material finns kvar medan du använder tjänsten, om du inte själv raderar det. Du kan radera ditt konto under Inställningar i appen. Då tas inloggningen, ditt personliga sparade material och dina medlemskap i delade lag bort.</p>
+          <p>Om du är president för ett delat lag måste du först överlåta presidentskapet eller radera laget. Om du lämnar eller raderar ditt konto kan innehåll som redan har sparats i ett delat lag fortfarande vara tillgängligt för övriga medlemmar. När ett lag raderas tas även dess sparade innehåll i appen bort.</p>
+          <p>Äldre matchhistorik och lokala utkast i målräknaren kan finnas kvar separat. Kontakta oss om du har frågor om sådana uppgifter eller vill begära att de tas bort.</p>
+          <p class="note">Enhetens egna säkerhetskopior styrs av dina inställningar hos Apple och påverkas inte nödvändigtvis av en radering inne i TacSketch.</p>
+        </section>
+
+        <section id="sv-barn">
+          <h2>Uppgifter om barn</h2>
+          <p>TacSketch är avsett för tränare och riktar sig inte till barn under 13 år. Den som lägger in uppgifter om spelare ansvarar för att informera berörda personer och se till att det finns rättslig grund för behandlingen. Var särskilt varsam med uppgifter och foton som rör barn.</p>
+        </section>
+
+        <section id="sv-kontakt">
+          <h2>Frågor och rättigheter</h2>
+          <div class="contact">
+            <p>Har du frågor om hur TacSketch hanterar uppgifter, vill begära tillgång, rättelse eller radering, eller undrar över innehåll i ett delat lag? Kontakta utvecklaren Erik Niklas Sälle:</p>
+            <p><a href="mailto:tacsketch@gmail.com">tacsketch@gmail.com</a></p>
+          </div>
+        </section>
+      </article>
+
+      <article id="policy-en" lang="en" hidden>
+        <p class="intro">TacSketch is a planning tool for coaches and teams. We use account details and the content you choose to create to run the app, sync your work, and enable collaboration.</p>
+        <nav aria-label="Contents">
+          <ul class="contents">
+            <li><a href="#en-data">Data</a></li>
+            <li><a href="#en-use">Use</a></li>
+            <li><a href="#en-storage">Storage and sharing</a></li>
+            <li><a href="#en-deletion">Deletion</a></li>
+            <li><a href="#en-children">Children</a></li>
+            <li><a href="#en-contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section id="en-data">
+          <h2>What information do we handle?</h2>
+          <ul>
+            <li><strong>Account:</strong> email address, user ID, name, and club name. You can sign in with email and password or with Apple. Authentication is handled by Firebase Authentication.</li>
+            <li><strong>Teams and players:</strong> team name, sport, colors, members and roles, and any player names, positions, numbers, or other details you enter. Team logos and player photos are optional.</li>
+            <li><strong>Content you create:</strong> tactics, drills, drawings, animations, formations, notes, training sessions, and images you choose to add.</li>
+            <li><strong>Training tests:</strong> test names, participants' names, and results recorded on different test occasions.</li>
+            <li><strong>Goal counter:</strong> the current score, selected timer, and end-signal setting are saved locally on your device so you can resume later. The new goal counter does not create cloud match history.</li>
+          </ul>
+          <p>Older app versions could save match history. Older records may still exist even though they are no longer displayed in the new goal counter.</p>
+        </section>
+
+        <section id="en-use">
+          <h2>Why do we use this information?</h2>
+          <p>We use it to sign you in, save and display your content across your devices, manage access to shared teams, and help teams follow up on training tests. We do not sell your personal information.</p>
+        </section>
+
+        <section id="en-storage">
+          <h2>Where is information stored and shared?</h2>
+          <p><strong>Google Firebase Authentication and Firestore</strong> are used for accounts, cloud synchronization, and shared teams. Content saved to a shared team can be viewed by team members according to their roles in the app.</p>
+          <p>The app also keeps settings, temporary copies of content, and the current goal-counter result on your device. Training-session PDFs and training-test Excel files are created when you choose to export or share them.</p>
+          <p><strong>Advertising:</strong> TacSketch currently shows no ads and does not request advertising tracking. Advertising is disabled in the current app version.</p>
+        </section>
+
+        <section id="en-deletion">
+          <h2>How long is information kept, and how can you delete it?</h2>
+          <p>Your account and saved content remain while you use the service unless you delete them. You can delete your account in the app's Settings. This removes your sign-in, your personal saved content, and your memberships in shared teams.</p>
+          <p>If you are the president of a shared team, you must first transfer the presidency or delete the team. Content already saved in a shared team may remain available to other members after you leave or delete your account. Deleting a team also removes its saved content in the app.</p>
+          <p>Older match history and local goal-counter drafts may remain separately. Contact us if you have questions about these records or want to request their removal.</p>
+          <p class="note">Device backups are controlled by your Apple settings and may not be affected by deletion inside TacSketch.</p>
+        </section>
+
+        <section id="en-children">
+          <h2>Children's information</h2>
+          <p>TacSketch is intended for coaches and is not directed at children under 13. Anyone entering player information is responsible for informing the people concerned and ensuring there is a valid legal basis for doing so. Take particular care with information and photos concerning children.</p>
+        </section>
+
+        <section id="en-contact">
+          <h2>Questions and your rights</h2>
+          <div class="contact">
+            <p>For questions about how TacSketch handles data, requests for access, correction or deletion, or questions about shared-team content, contact the developer Erik Niklas Sälle:</p>
+            <p><a href="mailto:tacsketch@gmail.com">tacsketch@gmail.com</a></p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer><div class="inner">© 2026 TacSketch · <span id="footer-label">Integritetspolicy</span></div></footer>
+
+  <script>
+    const labels = {
+      sv: { title: 'Integritetspolicy', eyebrow: 'Din data i TacSketch', copy: 'Här beskriver vi vilka uppgifter appen använder, var de sparas och hur du kan hantera dem.', updated: 'Senast uppdaterad: 4 oktober 2026', language: 'Välj språk', footer: 'Integritetspolicy' },
+      en: { title: 'Privacy Policy', eyebrow: 'Your data in TacSketch', copy: 'Learn what information the app uses, where it is stored, and how you can manage it.', updated: 'Last updated: October 4, 2026', language: 'Choose language', footer: 'Privacy Policy' }
+    };
+
+    function setLanguage(language) {
+      const selected = labels[language] ? language : 'sv';
+      document.documentElement.lang = selected;
+      document.title = `${labels[selected].title} | TacSketch`;
+      document.getElementById('top').textContent = labels[selected].title;
+      document.getElementById('hero-eyebrow').textContent = labels[selected].eyebrow;
+      document.getElementById('hero-copy').textContent = labels[selected].copy;
+      document.getElementById('hero-updated').textContent = labels[selected].updated;
+      document.getElementById('language-label').textContent = labels[selected].language;
+      document.getElementById('footer-label').textContent = labels[selected].footer;
+      document.getElementById('policy-sv').hidden = selected !== 'sv';
+      document.getElementById('policy-en').hidden = selected !== 'en';
+      document.querySelectorAll('[data-lang]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.lang === selected));
+      });
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(button => {
+      button.addEventListener('click', () => setLanguage(button.dataset.lang));
+    });
+    if (navigator.language && !navigator.language.toLowerCase().startsWith('sv')) setLanguage('en');
+  </script>
 </body>
 </html>
